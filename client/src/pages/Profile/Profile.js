@@ -38,8 +38,14 @@ const Profile = ({
     alanBtn({
       key: '4269cbaee8fdcc81ffe76d73a2cff96d2e956eca572e1d8b807a3e2338fdd0dc/stage',
       onCommand: ({ command }) => {
-        if (command === 'usersPage') {
+        if (command === 'homePage') {
+          window.location = '/';
+        } else if (command === 'usersPage') {
           window.location = '/users';
+        } else if (command === 'adminPage') {
+          if (me?.role === 'ADMIN') {
+            window.location = '/admin';
+          }
         }
       },
     });

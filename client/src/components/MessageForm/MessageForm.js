@@ -22,14 +22,14 @@ const MessageForm = ({ addMessage, message: { messages } }) => {
   const isSubmiting = messages.some((m) => m.id === 0);
 
   return (
-    <div className="message-form" id="message-list">
-      <h2>Write a Post</h2>
+    <div className="message-form">
+      <h2>Write a message</h2>
       <form onSubmit={formik.handleSubmit}>
         <textarea
           name="text"
           cols="30"
           rows="5"
-          placeholder="Hello World!"
+          placeholder="Write a message"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.text}
@@ -38,7 +38,7 @@ const MessageForm = ({ addMessage, message: { messages } }) => {
         {formik.touched.text && formik.errors.text ? (
           <p className="error">{formik.errors.text}</p>
         ) : null}
-        <input type="submit" className="write-message" value="Add Post" disabled={isSubmiting} />
+        <input type="submit" className="btn" value="Add Message" disabled={isSubmiting} />
       </form>
     </div>
   );

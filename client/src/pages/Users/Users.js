@@ -12,15 +12,23 @@ import requireAuth from '../../hoc/requireAuth';
 
 import './styles.css';
 
-const Users = ({ getUsers, users: { users, isLoading } }) => {
+const Users = ({ getUsers, users: { users, isLoading }, auth }) => {
   useEffect(() => {
     getUsers();
 
     alanBtn({
       key: '4269cbaee8fdcc81ffe76d73a2cff96d2e956eca572e1d8b807a3e2338fdd0dc/stage',
       onCommand: ({ command }) => {
-        if (command === 'usersPage') {
+        if (command === 'homePage') {
+          window.location = '/';
+        } else if (command === 'usersPage') {
           window.location = '/users';
+        } else if (command === 'profilePage') {
+          window.location = `/${auth.me.username}`;
+        } else if (command === 'adminPage') {
+          if (auth.me?.role === 'ADMIN') {
+            window.location = '/admin';
+          }
         }
       },
     });
