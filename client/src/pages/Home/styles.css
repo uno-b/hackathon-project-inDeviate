@@ -1,0 +1,26 @@
+.home-page .reseed-btn {
+  width: auto;
+}
+
+.home-page .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.parallax {
+  position: relative;
+  height: 600px;
+}
+
+.parallax h2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  color: white;
+  background-color: #6b35ffa9;
+  border-radius: 0.5rem;
+  padding: 2rem 3rem;
+  font-size: 3rem;
+
+  transform: translate(-50%, -50%);
+}

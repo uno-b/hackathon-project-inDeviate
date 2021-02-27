@@ -1,0 +1,79 @@
+.profile .profile-info {
+  display: flex;
+  padding-bottom: 20px;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.profile .avatar {
+  width: 220px;
+  height: 220px;
+  margin-right: 5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #6a35ff;
+  object-fit: cover;
+}
+
+.profile h1 {
+  text-align: center;
+  margin: 3rem auto;
+  font-size: 2.5rem;
+}
+
+.profile .label,
+.profile label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #696c64;
+}
+
+.profile .info {
+  font-size: 18px;
+}
+
+.profile .info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile .btn {
+  width: auto;
+  margin-right: 10px;
+}
+
+.profile input {
+  width: 40%;
+  display: block;
+}
+
+.profile .input-div {
+  /* white-space: nowrap; */
+}
+.profile .form {
+  margin-bottom: 30px;
+}
+
+.info-line {
+  margin-bottom: 1.5rem;
+}
+
+.edit-btn {
+  border: 2px solid #6a35ff;
+  background-color: #6a35ff;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  transition-duration: 0.2s;
+  background-color: white;
+  color: #6a35ff;
+}
+
+.edit-btn:hover {
+  border: 2px solid transparent;
+  background-color: #6a35ff;
+  color: white;
+}
