@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { Parallax } from 'react-parallax';
 import alanBtn from '@alan-ai/alan-sdk-web';
 

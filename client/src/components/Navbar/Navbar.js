@@ -151,6 +151,9 @@ m-1902 -23 c170 -21 335 -63 499 -127 121 -48 129 -59 100 -143 -43 -124 -36
                 <Link to="/admin">Admin</Link>
               </li>
             )}
+            <li className="nav-item">
+              <Link to={'/chat'}>Chat Room</Link>
+            </li>
             <li className="flex-1" />
             <Link to={`/${auth.me.username}`}>
               <img className="avatar" src={auth.me.avatar} />
