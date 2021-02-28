@@ -1,0 +1,9 @@
+.message-list h2 {
+  text-align: center;
+  margin: 5rem auto;
+  color: #6a6d97;
+}
+
+.message-list {
+  padding-bottom: 5rem;
+}

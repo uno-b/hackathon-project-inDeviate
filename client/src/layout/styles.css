@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  /* border: 1px solid green; */
+  min-height: calc(100% - 131px);
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}

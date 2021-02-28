@@ -1,0 +1,94 @@
+nav {
+  background-color: transparent;
+  padding-left: 30px;
+  padding-right: 10px;
+  height: 60px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem;
+}
+
+.logo {
+  display: inline-block;
+  color: #696c64;
+  font-size: 2rem;
+  margin-right: 5rem;
+  white-space: nowrap;
+}
+
+.project-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  font-size: 20px;
+  display: flex;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-flex;
+  transition: 0.2s;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  margin-left: 1rem;
+}
+
+.nav-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #696c64;
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #6a35ff;
+}
+
+.nav-item:hover a {
+  color: white;
+}
+
+.log-in,
+.log-out {
+  background-color: transparent;
+
+  border: 2px solid #6a35ff;
+}
+
+.log-in a,
+.log-out a {
+  color: #6a35ff;
+}
+
+.log-in:hover,
+.log-out:hover {
+  background-color: #6a35ff;
+}
+
+.log-in a:hover,
+.log-out a:hover {
+  color: white;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.navbar .avatar {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  margin-right: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+}
