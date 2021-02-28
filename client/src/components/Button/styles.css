@@ -1,12 +1,12 @@
-.button {
+.main-button {
   position: absolute;
-  top: 20rem;
-  left: 48%;
+  top: 22rem;
+  left: 40%;
   transform: translate(-50%, -50%);
   background-color: #6b35ffa9;
   color: white;
   border: 1px solid white;
-  width: 80px;
+  width: 100px;
   height: 40px;
   transition: ease-out 0.2s;
   border-radius: 8px;
@@ -16,11 +16,11 @@
   overflow: hidden;
 }
 
-.button:hover {
+.main-button:hover {
   color: black;
 }
 
-.button:before {
+.main-button:before {
   transition: 0.5s all ease;
   position: absolute;
   top: 0;
@@ -32,10 +32,16 @@
   background-color: white;
 }
 
-.button:hover:before {
+.main-button:hover:before {
   transition: 0.5s all ease;
   left: 0%;
   right: 0%;
   opacity: 1;
   z-index: -1;
+}
+
+.main-button * {
+  font-size: 1.5rem;
+  position: relative;
+  top: -15px;
 }

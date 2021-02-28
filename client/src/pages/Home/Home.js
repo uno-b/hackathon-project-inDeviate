@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Parallax } from 'react-parallax';
-import alanBtn from '@alan-ai/alan-sdk-web';
 
 import Layout from '../../layout/Layout';
 import MessageList from '../../components/MessageList/MessageList';
@@ -18,26 +17,7 @@ const Home = ({ auth, reseedDatabase }) => {
     reseedDatabase();
   };
 
-  useEffect(() => {
-    alanBtn({
-      key: '4269cbaee8fdcc81ffe76d73a2cff96d2e956eca572e1d8b807a3e2338fdd0dc/stage',
-      onCommand: ({ command }) => {
-        if (command === 'homePage') {
-          window.location = '/';
-        } else if (command === 'usersPage') {
-          window.location = '/users';
-        } else if (command === 'profilePage') {
-          window.location = `/${auth.me.username}`;
-        } else if (command === 'adminPage') {
-          if (auth.me?.role === 'ADMIN') {
-            window.location = '/admin';
-          }
-        } else if (command === 'chatPage') {
-          window.location = '/chat';
-        }
-      },
-    });
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <Layout>

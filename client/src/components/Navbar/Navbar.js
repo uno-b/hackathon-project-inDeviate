@@ -124,7 +124,7 @@ m-1902 -23 c170 -21 335 -63 499 -127 121 -48 129 -59 100 -143 -43 -124 -36
             </li>
             <li className="flex-1" />
             <Link to={`/${auth.me.username}`}>
-              <img className="avatar" src={auth.me.avatar} />
+              <img className="avatar" src={auth.me.avatar} alt="Avatar" />
             </Link>
 
             <li className="nav-item log-out" onClick={onLogOut}>

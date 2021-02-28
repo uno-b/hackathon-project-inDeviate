@@ -7,8 +7,13 @@
   font-weight: bold;
 }
 
+.cover {
+  margin-top: 3.5rem;
+}
+
 .parallax {
   position: relative;
+  top: 1rem;
   height: 600px;
 }
 

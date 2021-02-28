@@ -1,5 +1,5 @@
 {
-  "name": "mern-boilerplate",
+  "name": "inDeviate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "node": "12.16.1"
   },
   "scripts": {
-    "start-prod": "npm run build && node ./build/index.js",
+    "start-prod": "SET NODE_ENV=production && npm run build && node ./build/index.js",
     "build": "npm run clean && npm run build-babel",
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./src -s",
@@ -16,7 +16,7 @@
     "client": "npm start --prefix ../client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Nemanja Mitic (https://github.com/nemanjam)",
+  "author": "Unumandakh (https://github.com/uno-b)",
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.2.3",

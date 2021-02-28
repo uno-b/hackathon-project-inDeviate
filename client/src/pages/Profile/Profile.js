@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { useFormik } from 'formik';
 import moment from 'moment';
 import { withRouter } from 'react-router-dom';
-import alanBtn from '@alan-ai/alan-sdk-web';
 
 import { getProfile, editUser, deleteUser } from '../../store/actions/userActions';
 import { loadMe } from '../../store/actions/authActions';
@@ -33,23 +32,6 @@ const Profile = ({
   useEffect(() => {
     getProfile(matchUsername, history);
   }, [matchUsername]);
-
-  useEffect(() => {
-    alanBtn({
-      key: '4269cbaee8fdcc81ffe76d73a2cff96d2e956eca572e1d8b807a3e2338fdd0dc/stage',
-      onCommand: ({ command }) => {
-        if (command === 'homePage') {
-          window.location = '/';
-        } else if (command === 'usersPage') {
-          window.location = '/users';
-        } else if (command === 'adminPage') {
-          if (me?.role === 'ADMIN') {
-            window.location = '/admin';
-          }
-        }
-      },
-    });
-  }, []);
 
   // if changed his own username reload me, done in userActions
 

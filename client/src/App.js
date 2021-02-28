@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import Cookies from 'js-cookie';
+import alanBtn from '@alan-ai/alan-sdk-web';
 
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
@@ -22,6 +23,29 @@ const App = ({ logInUserWithOauth, auth, loadMe }) => {
   useEffect(() => {
     loadMe();
   }, [loadMe]);
+
+  useEffect(() => {
+    alanBtn({
+      key: '4269cbaee8fdcc81ffe76d73a2cff96d2e956eca572e1d8b807a3e2338fdd0dc/stage',
+      onCommand: ({ command }) => {
+        if (command === 'homePage') {
+          window.location = '/';
+        } else if (command === 'usersPage') {
+          window.location = '/#/users';
+        } else if (command === 'profilePage') {
+          window.location = `/${auth.me.username}`;
+        } else if (command === 'adminPage') {
+          if (auth.me?.role === 'ADMIN') {
+            window.location = '/admin';
+          }
+        } else if (command === 'chatPage') {
+          window.location = '/#/chat';
+        } else if (command === 'jobsPage') {
+          window.location = '/#/jobs';
+        }
+      },
+    });
+  }, []);
 
   //redosled hookova
   useEffect(() => {
