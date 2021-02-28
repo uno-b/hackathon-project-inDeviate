@@ -12,6 +12,7 @@ import Users from './pages/Users/Users';
 import Admin from './pages/Admin/Admin';
 import NotFound from './pages/NotFound/NotFound';
 import Chat from './pages/Chat/Chat';
+import Jobs from './pages/Jobs/Jobs';
 
 import Loader from './components/Loader/Loader';
 
@@ -49,6 +50,7 @@ const App = ({ logInUserWithOauth, auth, loadMe }) => {
           <Route path="/notfound" component={NotFound} />
           <Route path="/admin" component={Admin} />
           <Route path="/chat" component={Chat} />
+          <Route path="/jobs" component={Jobs} />
           <Route exact path="/:username" component={Profile} />
           <Route exact path="/" component={Home} />
           <Route component={NotFound} />

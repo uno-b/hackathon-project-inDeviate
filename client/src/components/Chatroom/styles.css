@@ -6,7 +6,7 @@
   bottom: 0;
   display: flex;
   flex-direction: column;
-  margin: 16px;
+  margin: 0;
 }
 
 .room-name {
@@ -36,7 +36,7 @@
 
 .message-item {
   width: 55%;
-  margin: 8px;
+  margin: 0px;
   padding: 12px 8px;
   word-break: break-word;
   border-radius: 4px;
@@ -57,9 +57,30 @@
   font-size: 28px;
   font-weight: 600;
   color: white;
-  background: #31a24c;
+  background: #6a35ff;
   padding: 24px 12px;
-  border: none;
+  border: 2px solid none;
+  transition-duration: 0.2s;
+}
+
+.send-message-button:hover {
+  border: 2px solid #6a35ff;
+  color: #6a35ff;
+  background-color: transparent;
+}
+
+.chat-room-container {
+  width: 50%;
+  margin: 10rem auto 5rem;
+}
+
+.room-name {
+  text-align: center;
+  color: #696c64;
+}
+
+.new-message-input-field {
+  height: 5rem;
 }
 
 .messages-container,

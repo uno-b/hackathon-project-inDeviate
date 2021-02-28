@@ -148,9 +148,9 @@ const Profile = ({
         {error && <p className="error">{error}</p>}
 
         {isEdit && (
-          <div className="form">
+          <div className="edit-form">
             <form onSubmit={formik.handleSubmit}>
-              <div>
+              <div className="unit">
                 <label>Avatar:</label>
                 <input name="image" type="file" onChange={onChange} />
                 {image && (
@@ -167,7 +167,7 @@ const Profile = ({
                 )}
               </div>
               <input name="id" type="hidden" value={formik.values.id} />
-              <div className="input-div">
+              <div className="unit">
                 <label>Name:</label>
                 <input
                   placeholder="Name"
@@ -182,7 +182,7 @@ const Profile = ({
                   <p className="error">{formik.errors.name}</p>
                 ) : null}
               </div>
-              <div className="input-div">
+              <div className="unit">
                 <label>Username:</label>
                 <input
                   placeholder="Username"
@@ -214,16 +214,18 @@ const Profile = ({
                   ) : null}
                 </div>
               )}
-              <button type="submit" className="btn">
-                Save
-              </button>
-              <button
-                onClick={() => handleDeleteUser(profile.id, history)}
-                type="button"
-                className="btn"
-              >
-                Delete profile
-              </button>
+              <div className="save-delete">
+                <button type="submit" className="edit-btn">
+                  Save
+                </button>
+                <button
+                  onClick={() => handleDeleteUser(profile.id, history)}
+                  type="button"
+                  className="edit-btn"
+                >
+                  Delete profile
+                </button>
+              </div>
             </form>
           </div>
         )}

@@ -23,13 +23,13 @@ const MessageForm = ({ addMessage, message: { messages } }) => {
 
   return (
     <div className="message-form">
-      <h2>Write a message</h2>
+      <h2>Write a post</h2>
       <form onSubmit={formik.handleSubmit}>
         <textarea
           name="text"
           cols="30"
           rows="5"
-          placeholder="Write a message"
+          placeholder="Write a post"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.text}
@@ -38,7 +38,7 @@ const MessageForm = ({ addMessage, message: { messages } }) => {
         {formik.touched.text && formik.errors.text ? (
           <p className="error">{formik.errors.text}</p>
         ) : null}
-        <input type="submit" className="btn" value="Add Message" disabled={isSubmiting} />
+        <input type="submit" className="write-message" value="Add Post" disabled={isSubmiting} />
       </form>
     </div>
   );

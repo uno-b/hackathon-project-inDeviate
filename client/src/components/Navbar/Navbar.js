@@ -2,37 +2,9 @@ import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 import { logOutUser } from '../../store/actions/authActions';
 import './styles.css';
-
-const svgVariant = {
-  hidden: {
-    rotate: -10,
-  },
-  visible: {
-    rotate: 0,
-    transition: {
-      duration: 1,
-    },
-  },
-};
-
-const pathVariants = {
-  hidden: {
-    opacity: 0,
-    pathLength: 0,
-  },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
-    transition: {
-      duration: 2,
-      ease: 'easeInOut',
-    },
-  },
-};
 
 const Navbar = ({ auth, logOutUser, history }) => {
   const onLogOut = (event) => {
@@ -43,10 +15,7 @@ const Navbar = ({ auth, logOutUser, history }) => {
   return (
     <nav className="navbar">
       <h2 className="logo">
-        <motion.svg
-          variants={svgVariant}
-          initial="hidden"
-          animate="visible"
+        <svg
           className="project-logo"
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
@@ -61,14 +30,12 @@ const Navbar = ({ auth, logOutUser, history }) => {
             fill="#000000"
             stroke="none"
           >
-            <motion.path
-              variants={pathVariants}
+            <path
               d="M1468 7903 c-9 -10 -42 -61 -73 -113 -32 -52 -70 -114 -86 -137 -16
 -23 -29 -44 -29 -47 0 -3 370 -6 823 -6 627 0 826 3 835 12 23 23 12 50 -46
 111 -32 34 -84 92 -116 130 l-58 67 -618 0 c-575 0 -618 -1 -632 -17z"
             />
-            <motion.path
-              variants={pathVariants}
+            <path
               d="M1287 6463 c-2 -779 -5 -894 -19 -938 -27 -85 -55 -143 -139 -281
 -44 -74 -93 -166 -109 -205 -17 -39 -40 -88 -52 -108 -42 -68 -381 -566 -500
 -734 -153 -214 -179 -259 -227 -382 -51 -129 -54 -143 -91 -430 -30 -230 -31
@@ -99,8 +66,7 @@ const Navbar = ({ auth, logOutUser, history }) => {
 l278 0 0 95 0 95 -288 0 c-211 0 -291 3 -300 12 -19 19 -16 202 4 222 13 14
 57 16 325 16 l309 0 0 85 0 85 -400 0 -399 0 -4 -887z"
             />
-            <motion.path
-              variants={pathVariants}
+            <path
               d="M2272 4901 c-23 -11 -67 -44 -96 -73 -47 -47 -57 -65 -86 -153 -18
 -55 -41 -116 -50 -135 -21 -41 -745 -762 -787 -783 -15 -8 -62 -18 -105 -22
 -68 -6 -81 -10 -117 -42 -60 -51 -81 -98 -81 -180 0 -129 35 -191 132 -233 89
@@ -111,8 +77,7 @@ l278 0 0 95 0 95 -288 0 c-211 0 -291 3 -300 12 -19 19 -16 202 4 222 13 14
 50 -156 123 -201 164 -45 40 -151 134 -235 209 -170 151 -202 186 -276 309
 -109 182 -195 260 -295 267 -37 3 -64 -2 -95 -16z"
             />
-            <motion.path
-              variants={pathVariants}
+            <path
               d="M3185 2064 c-127 -12 -208 -29 -279 -59 -45 -18 -106 -40 -136 -50
 -30 -10 -119 -49 -198 -88 -177 -87 -213 -93 -304 -49 -205 98 -630 194 -855
 193 -135 -1 -237 -20 -307 -59 -66 -37 -87 -77 -93 -185 -6 -94 14 -160 70
@@ -131,7 +96,7 @@ m-1902 -23 c170 -21 335 -63 499 -127 121 -48 129 -59 100 -143 -43 -124 -36
 169 175 89z"
             />
           </g>
-        </motion.svg>{' '}
+        </svg>{' '}
         inDeviate
       </h2>
       <ul className="nav-links flex-1">
@@ -153,6 +118,9 @@ m-1902 -23 c170 -21 335 -63 499 -127 121 -48 129 -59 100 -143 -43 -124 -36
             )}
             <li className="nav-item">
               <Link to={'/chat'}>Chat Room</Link>
+            </li>
+            <li className="nav-item">
+              <Link to={'/jobs'}>Jobs</Link>
             </li>
             <li className="flex-1" />
             <Link to={`/${auth.me.username}`}>

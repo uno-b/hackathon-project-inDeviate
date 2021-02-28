@@ -16,6 +16,8 @@ const Admin = ({ auth }) => {
           window.location = '/users';
         } else if (command === 'profilePage') {
           window.location = `/${auth.me.username}`;
+        } else if (command === 'chatPage') {
+          window.location = '/chat';
         }
       },
     });

@@ -32,6 +32,8 @@ const Home = ({ auth, reseedDatabase }) => {
           if (auth.me?.role === 'ADMIN') {
             window.location = '/admin';
           }
+        } else if (command === 'chatPage') {
+          window.location = '/chat';
         }
       },
     });

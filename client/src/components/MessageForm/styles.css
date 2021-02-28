@@ -1,5 +1,6 @@
 .message-form {
-  margin: 5rem 0;
+  margin: 5rem auto;
+  width: 50%;
 }
 
 .message-form .btn {
@@ -12,8 +13,16 @@
 }
 
 .write-message {
+  font-weight: bold;
+  color: white;
+  transition-duration: 0.2s;
+  border: 2px solid transparent;
+  background-color: #551a8b;
+}
+
+.write-message:hover {
   border: 2px solid #551a8b;
   color: #551a8b;
-  font-weight: bold;
   background-color: transparent;
+  font-weight: bold;
 }
